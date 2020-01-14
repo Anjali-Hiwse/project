@@ -1,0 +1,59 @@
+.rn_ConditionalChatLink .rn_ChatAvailable
+{
+    display: block;
+}
+#ERRORPAGE_Chat #rn_chat1_Link #myChatLinkInfo {
+	background-image: url("images/chat_errorpage.jpg");	
+	background-repeat: no-repeat;
+	background-size: 375px 118px; 
+	width: 375px;
+	height: 118px;	
+}
+
+#PDP_Chat #rn_chat1_Link #myChatLinkInfo {
+	background-image: url("images/chat_pdp.gif");
+	background-repeat: no-repeat;
+	background-size: 160px 49px; 
+	width: 160px;
+	height: 49px;	
+}
+
+#CART_Chat #rn_chat1_Link #myChatLinkInfo {
+	background-image: url("images/chat-cart.gif");
+	background-repeat: no-repeat;
+	background-size: 182px 80px; 
+	width: 182px;
+	height: 80px;	
+}
+
+#CHECKOUT_Chat #rn_chat1_Link #myChatLinkInfo {
+	background-image: url("images/chat-checkout.gif");
+	background-repeat: no-repeat;
+	background-size: 300px 60px; 
+	width: 300px;
+	height: 60px;	
+}
+
+#NOSEARCHRESULTS_Chat #rn_chat1_Link #myChatLinkInfo {
+	background-image: url("images/chat_404.gif");	
+	background-repeat: no-repeat;
+	background-size: 110px 45px; 
+	width: 110px;
+	height: 45px;	
+}
+#TEST_Chat #rn_chat1_Link #myChatLinkInfo {
+	border: 1px solid #76a246;
+        border-radius: 5px;
+	font: 600 1.0em adelle;
+	color: #76a246;
+	width: 87px;
+	height: 29px;	
+}
+#TESTA_Chat #rn_chat1_Link #myChatLinkInfo {
+	background-image: url("images/image.gif");	
+	background-repeat: no-repeat;
+	background-size: 107px 39px; 
+	width: 107px;
+	height: 39px;	
+}
+
