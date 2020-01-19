@@ -1,0 +1,20 @@
+<h1 style="text-align: center">Add New Copy</h1>
+
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="">Enter Book Id</label>
+      <input [(ngModel)]="bookid" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="">Enter Rack no</label>
+      <input [(ngModel)]="rackno" type="text" class="form-control">
+    </div>
+   
+    <div class="form-group">
+        <button (click)="addnewcopy()" class="btn btn-success">Add New Copy</button>
+    </div>
+  </div>
+</div>
+

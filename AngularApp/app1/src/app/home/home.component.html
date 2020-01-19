@@ -1,0 +1,45 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+ <link rel="stylesheet" href="../assets/shared.css"> 
+</head>
+<body>
+
+<div class="topnav">
+     <h3 >Garderner's Company</h3>
+  <a class="active" href="/user">Home</a>
+  <a href="/user/editprofile">Edit Profile</a>
+  <a href="/user/cart">Cart</a>
+  <a href="/user/order">Orders</a>
+ 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="submit" class="btn btn-primary" (click)="onSignOut()">Sign Out</button>
+  <!-- <a routerLink="/register">Register</a> -->
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search Product by Category" name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+<!-- <div style="padding-left:16px">
+  <h2>Responsive Search Bar</h2>
+  <p>Navigation bar with a search box and a submit button inside of it.</p>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div> -->
+<div class="panel panel-default">
+      
+  <div class="panel-footer " style="background-color: black; height: 100px;">
+  <a href="/user/aboutus">About Us</a> &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/user/contactus">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/user/services">Services</a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/user/terms">Terms & Conditions</a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/user/privacy">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/user/copyright">&copy;Copyright</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<div class="table-responsive">
+  <table class="table">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Book Name</th>
+        <th scope="col">Available</th>
+        <th scope="col">Issued</th>
+        <th scope="col">Count</th>
+    </tr>
+    <tr *ngFor="let book of books">
+      <td>{{book.id}}</td>
+      <td>{{book.bookName}}</td>
+      <td>{{book.available}}</td>
+      <td>{{book.issued}}</td>
+      <td>{{book.count}}</td>
+    </tr>
+  </table>
+  
+</div>

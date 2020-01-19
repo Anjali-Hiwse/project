@@ -1,0 +1,14 @@
+<div class="table-responsive">
+  <table class="table">
+    <tr>
+        <th scope="col">Book Id</th>
+        <th scope="col">Fine</th>
+    </tr>
+    <tr *ngFor="let book of books">
+      <td>{{book.bookid}}</td>
+      <td>{{book.fine}}</td>
+      <td><input type="button" value="Return Book" class="btn btn-success"></td>
+    </tr>
+  </table>
+  
+</div>

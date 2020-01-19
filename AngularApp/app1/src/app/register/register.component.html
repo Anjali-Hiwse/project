@@ -1,0 +1,72 @@
+<h1 style="text-align: center">Register Here</h1>
+
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="">First Name</label>
+      <input [(ngModel)]="firstname" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="">Last Name</label>
+        <input [(ngModel)]="lastname" type="text" class="form-control">
+      </div>
+    <div class="form-group">
+      <label for="">Email</label>
+      <input [(ngModel)]="email" type="email" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="">Phone</label>
+      <input [(ngModel)]="phone" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="">Password</label>
+      <input [(ngModel)]="password" type="password" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="">Address Line 1</label>
+      <input [(ngModel)]="addressline1" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="">Address Line 2</label>
+        <input [(ngModel)]="addressline2" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Address Line 2</label>
+        <input [(ngModel)]="addressline2" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Country</label>
+        <select name="country" id="country" class="form-control">
+          <option>Select Country</option>
+          <option>India</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="">State</label>
+        <select name="state" id="state" class="form-control">
+          <option>Select State</option>
+          <option>Maharashtra</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="">City</label>
+        <select name="city" id="city" class ="form-control">
+          <option>Select City</option>
+          <option>Pune</option>
+          <option>Mumbai</option>
+          <option>Nagpur</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="">Zip</label>
+        <input [(ngModel)]="zip" type="text" class="form-control">
+      </div>
+    <div class="form-group">
+        <button (click)="onSignup()" class="btn btn-success">Update</button>
+        <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px;">Cancel</button>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,17 @@
+<div class="table-responsive">
+  <table class="table">
+    <tr>
+        <th scope="col">Book Name</th>
+        <th scope="col">Author</th>
+        <th scope="col">Price</th>
+        <th scope="col">Issue Date</th>
+    </tr>
+    <tr *ngFor="let pay of issuedBook">
+      <td>{{pay.bookname}}</td>
+      <td>{{pay.author}}</td>
+      <td>{{pay.price}}</td>
+      <td>{{pay.issuedate}}</td>
+    </tr>
+  </table>
+  
+</div>

@@ -1,0 +1,21 @@
+<div class="table-responsive">
+  <table class="table">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">User Id</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Type</th>
+        <th scope="col">Tx Time</th>
+        <th scope="col">Due Date</th>
+    </tr>
+    <tr *ngFor="let pay of userpayhistory">
+      <td>{{pay.id}}</td>
+      <td>{{pay.userid}}</td>
+      <td>{{pay.amount}}</td>
+      <td>{{pay.type}}</td>
+      <td>{{pay.tx_time}}</td>
+      <td>{{pay.due_date}}</td>
+    </tr>
+  </table>
+  
+</div>

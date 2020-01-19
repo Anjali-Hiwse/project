@@ -1,0 +1,28 @@
+<p>ustatus works!</p>
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Addhar Card No</th>
+            <th scope="col">License</th>
+            <th scope="col">Vehicle Type</th>
+            <th scope="col">Status</th>
+        </tr>
+        <tr>
+            <td>Shubham kabra</td>
+            <td>1234-2353-6548</td>
+            <td>Learning</td>
+            <td>Two-wheeler</td>
+            <td><a href="demolicense">Approve or Not</a></td>
+        </tr>
+        <tr *ngFor="let user of userlist">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.role}}</td>
+        </tr>
+    </table>
+
+</div>

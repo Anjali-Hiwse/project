@@ -1,0 +1,64 @@
+<nav class="navbar sticky-top navbar-inverse" *ngIf="flag">
+  <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Hello ,{{email}}</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" [ngSwitch]="email">
+        <ul class="nav navbar-nav">
+
+          <li><a routerLink="/home/edit">Edit Profile</a></li>
+          <li><a routerLink="/home/changePassword" routerLinkActive="active">Change Password</a></li>
+
+
+          <ul class="nav navbar-nav" *ngSwitchCase="'Librarian'">
+          <li><a routerLink="/home/checkBookavailability">Check Book Availability</a></li>
+          <li><a routerLink="/home/newbook">Add New Book</a></li>
+          <li><a routerLink="/home/newcopy">Add New Copy</a></li>
+          <li><a routerLink="/home/returnbook">Return Book</a></li>
+          <li><a routerLink="/home/issueBook">Issue Book</a></li>
+          <li><a routerLink="/home/issuedbooks">List of Issued Book</a></li>
+          <li><a routerLink="/home/addmember">Add New Member</a></li>
+          <li><a routerLink="/home/payment">Take payment</a></li>
+          <li><a routerLink="/home/paymenthistoty">Payment History</a></li>
+          <li><a routerLink="/home/listofuser">List Of All User</a></li>
+
+          <li> <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search Book by Name">
+            </div>
+            <button type="button" (click)="onSearch()" class="btn btn-default">Search</button>
+          </form></li>
+        </ul>
+
+
+          <ul class="nav navbar-nav" *ngSwitchCase="'Admin'">
+          <li ><a routerLink="/home/subjectwise">Subjectwise Copies Report</a></li>
+          <li><a routerLink="/home/bookwise">Bookwise Copies Report</a></li>
+          <li><a routerLink="/home/feesorfine">Fees/Fine Report</a></li>   
+        </ul>
+         
+        <ul class="nav navbar-nav" *ngSwitchCase="'User'">
+          <li><a routerLink="/home/listofissuedBook">Issued Books</a></li>
+          <li><a routerLink="/home/userpaymenthistoty">Payment History</a></li>
+          <li><a routerLink="/home/help">help</a></li>
+
+          <li> <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search Book by Name">
+            </div>
+            <button type="button" (click)="onSearch()" class="btn btn-default">Search</button>
+          </form></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><button (click)="onLogout()" style="margin-top: 10px;" class="btn btn-link">Logout</button></li>
+        </ul>
+      </ul>
+      </div>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

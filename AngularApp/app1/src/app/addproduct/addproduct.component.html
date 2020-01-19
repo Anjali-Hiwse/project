@@ -1,0 +1,32 @@
+<h1 style="text-align: center">Add Product</h1>
+
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="">Product Id</label>
+      <input [(ngModel)]="product_id" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="">Product Name</label>
+      <input [(ngModel)]="product_name" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="">Product Image</label>
+        <input [(ngModel)]="product_image" type="text" class="form-control">
+      </div>
+    <div class="form-group">
+      <label for="">Product price</label>
+      <input [(ngModel)]="product_price" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="">Product Stock</label>
+      <input [(ngModel)]="product_stock" type="text" class="form-control">
+    </div>
+    
+    <div class="form-group">
+        <button (click)="addnewProdcut()" class="btn btn-success">Add</button>
+    </div>
+  </div>
+</div>
+

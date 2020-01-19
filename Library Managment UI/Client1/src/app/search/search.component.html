@@ -1,0 +1,23 @@
+<div class="table-responsive">
+  <table class="table">
+      <tr>
+          <th scope="col">Book Id</th>
+          <th scope="col">Book Name</th>
+          <th scope="col">Author</th>
+          <th scope="col">Subject</th>
+          <th scope="col">Book Price</th>
+          <th scope="col">ISBN</th>
+      </tr>
+
+    <tr *ngFor="let book of books">
+      <td>{{book.id}}</td>
+      <td>{{book.name}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.subject}}</td>
+      <td>{{book.price}}</td>
+      <td>{{book.isbn}}</td>
+      <td><button type="button" class="btn btn-success">Edit</button></td>
+    </tr>
+  </table>
+  
+</div>

@@ -1,0 +1,5 @@
+ insert into user_details values(default,'Flat 01','Block A','Pune','India','354657676','MH','21323','pj@gmail.com','Pooja','Umarji','pj123','CUSTOMER');
+
+
+ insert into user_details values(default,'Flat 02','Block B','Delhi','India','69859679','Delhi','132344','p@gmail.com','Purnima','Sahu','p123','CUSTOMER');
+

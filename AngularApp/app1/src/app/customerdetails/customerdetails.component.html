@@ -1,0 +1,23 @@
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th scope="col">Customer Id</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Customer Email</th>
+        <tr>
+          <td scope="col">11</td>
+          <td scope="col">Ross Geller>
+          <td scope="col">a@gmail.com</td>
+          <td><button type="button" class="btn btn-danger">Delete</button></td>
+      </tr>
+  
+      <tr *ngFor="let u of user_details">
+        <td>{{u.user_id}}</td>
+        <td>{{u.user_fname}} {{u.user_lname}}</td>
+        <td>{{u.user_email}}</td>
+        <td><button type="button" class="btn btn-danger">Delete</button></td>
+      </tr>
+    </table>
+    
+  </div>
+  
