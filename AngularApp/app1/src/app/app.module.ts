@@ -25,6 +25,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { ServicesComponent } from './services/services.component';
 import { TermsComponent } from './terms/terms.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot([

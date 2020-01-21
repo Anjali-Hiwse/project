@@ -6,10 +6,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient
+              ) { }
 
-  editprofile(phone,details)
-  {
-    this.http.put("http://localhost:42/admin/editprofile"+phone,details);
+  validateUser(userObj){
+    console.log(userObj);
+    
+    return this.http.post("http://localhost:8080/Garden_Fever/login_details/login",userObj);
   }
+
+
 }

@@ -1,5 +1,15 @@
- insert into user_details values(default,'Flat 01','Block A','Pune','India','354657676','MH','21323','pj@gmail.com','Pooja','Umarji','pj123','CUSTOMER');
+
+#User Details Table
+
+insert into user_details values(1,'Flat 01','Block A','Pune','India','MH','475586','pj@gmail.com','Pooja','Umarji','pj123','9446676778','CUSTOMER','ACTIVE');
+ 
+insert  into user_details values(2,'Flat 02','BlockB','Mumbai','India','MH','496856','p@gmail.com','Purnima','Sahu','p123','94354334590','CUSTOMER','ACTIVE ');
 
 
- insert into user_details values(default,'Flat 02','Block B','Delhi','India','69859679','Delhi','132344','p@gmail.com','Purnima','Sahu','p123','CUSTOMER');
+insert  into user_details values(3,'Flat 03','BlockC','Bhilai','India','CG','567689','sh@gmail.com','Shruti','Sharma','s123','34864969401','ADMIN','ACTIVE ');
+
+
+#Products 
+insert into products values(101,"","Required less water",'Cactus','2020-01-12',50,'PLANT',100,'ACTIVE');
+insert into products values(102,"","Sturdy blade is securely fastened into a comfortable hardwood handle",'Trowel','2020-01-18',100,'TOOL',300,'ACTIVE');
 

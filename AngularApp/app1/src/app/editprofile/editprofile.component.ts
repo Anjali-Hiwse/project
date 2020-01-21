@@ -8,13 +8,8 @@ import { DataService } from '../data.service';
 })
 export class EditprofileComponent implements OnInit {
   details: any;
-  phone: number;
-  constructor(private service: DataService) { }
 
-  onSignup()
-  {
-        this.service.editprofile(this.phone,this.details);
-  }
+  constructor(private service: DataService) { }
 
   ngOnInit() {
   }
