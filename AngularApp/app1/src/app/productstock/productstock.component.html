@@ -7,27 +7,20 @@
             <th scope="col">Updated Date</th>
             <th scope="col">Stock</th>
         </tr>
-
-        <tr>
-          <td scope="col">1</td>
-          <td scope="col">Terazza</td>
-          <td scope="col">$125.00</td>
-          <th scope="col">20-12-2019</th>
-          <th scope="col">100</th>
-          <td><button type="button" class="btn btn-success">Add</button></td>
-          <td><button type="button" class="btn btn-success">Remove</button></td>
-      </tr>
   
-      <tr *ngFor="let p of products">
-        <td>{{p.product_id}}</td>
-        <td>{{p.product_name}}</td>
-        <td>{{p.product_price}}</td>
-        <td>{{p.product_updated}}</td>
-        <td>{{p.product_stock}}</td>
-        <td><button type="button" class="btn btn-success">Add</button></td>
-        <td><button type="button" class="btn btn-success">Remove</button></td>
+      <tr *ngFor="let p of product">
+        <td>{{p.pId}}</td>
+        <td>{{p.pName}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.pUpdated}}</td>
+        <td>{{p.stock}}</td>
+
+        <td><a href="/admin/deleteproduct/{{p.pId}}"> Delete</a></td>
       </tr>
     </table>
     
   </div>
   
+
+
+

@@ -5,18 +5,12 @@ import javax.persistence.*;
 @Embeddable
 public class Address 
 {
-   private String phone,state,city,zip;
+   private String state,city,zip;
    private String addressLine1,addressLine2;
    private String country;
    
    
-    @Column(name="phone",length = 20)
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
+    
 	
 	@Column(name="state",length=20,nullable = false)
 	public String getState() {
@@ -65,11 +59,11 @@ public class Address
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	
 	@Override
 	public String toString() {
-		return "Address [phone=" + phone + ", state=" + state + ", city=" + city + ", zip=" + zip + ", addressLine1="
-				+ addressLine1 + ", addressLine2=" + addressLine2 + ", country=" + country + "]";
+		return "Address [state=" + state + ", city=" + city + ", zip=" + zip + ", addressLine1=" + addressLine1
+				+ ", addressLine2=" + addressLine2 + ", country=" + country + "]";
 	}
-	      
+	
+		      
 }

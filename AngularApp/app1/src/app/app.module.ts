@@ -26,6 +26,8 @@ import { ServicesComponent } from './services/services.component';
 import { TermsComponent } from './terms/terms.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EditproductComponent } from './editproduct/editproduct.component';
+import { EditprofilecustComponent } from './editprofilecust/editprofilecust.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { HttpClientModule } from '@angular/common/http';
     ContactusComponent,
     ServicesComponent,
     TermsComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    EditproductComponent,
+    EditprofilecustComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +63,8 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot([
       { path : "",component: LoginComponent},
       { path : "user",component: HomeComponent},
-      { path : "user",component: HomeComponent,children:[{path:"editprofile",component:EditprofileComponent}]},
+      { path : "user",component: HomeComponent,children:[{path:"editprofilecust/:cem",component:EditprofilecustComponent}]},
+      { path : "user",component: HomeComponent,children:[{path:"product",component:ProductComponent}]},
       { path : "user",component: HomeComponent,children:[{path:"order",component:OrderComponent}]},
       { path : "user",component: HomeComponent,children:[{path:"cart",component:CartComponent}]},
       { path : "user",component: HomeComponent,children:[{path:"aboutus",component:AboutusComponent}]},
@@ -68,9 +73,9 @@ import { HttpClientModule } from '@angular/common/http';
       { path : "user",component: HomeComponent,children:[{path:"privacy",component:PrivacyComponent}]},
       { path : "cart",component: CartComponent},
       { path : "admin",component: AdminComponent},
-      { path : "admin",component: AdminComponent,children:[{path:"editprofile",component:EditprofileComponent}]},
+      { path : "admin",component: AdminComponent,children:[{path:"editprofile/:aem",component:EditprofileComponent}]},
       { path : "admin",component: AdminComponent,children:[{path:"addproduct",component:AddproductComponent}]},
-      { path : "admin",component: AdminComponent,children:[{path:"deleteproduct",component:DeleteproductComponent}]},
+      { path : "admin",component: AdminComponent,children:[{path:"deleteproduct/:pId",component:DeleteproductComponent}]},
       { path : "admin",component: AdminComponent,children:[{path:"productstock",component:ProductstockComponent}]},
       { path : "admin",component: AdminComponent,children:[{path:"customerdetails",component:CustomerdetailsComponent}]},
       { path : "admin",component: AdminComponent,children:[{path:"orderdetails",component:OrderdetailsComponent}]},

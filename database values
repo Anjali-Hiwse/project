@@ -8,8 +8,27 @@ insert  into user_details values(2,'Flat 02','BlockB','Mumbai','India','MH','496
 
 insert  into user_details values(3,'Flat 03','BlockC','Bhilai','India','CG','567689','sh@gmail.com','Shruti','Sharma','s123','34864969401','ADMIN','ACTIVE ');
 
+insert  into user_details values(4,'Flat 04','Block D','Nagpur','India','MH','566578','ah@gmail.com','Ashlesha','Kedar','ah123','46576778923','CUSTOMER','ACTIVE');
+
 
 #Products 
-insert into products values(101,"","Required less water",'Cactus','2020-01-12',50,'PLANT',100,'ACTIVE');
-insert into products values(102,"","Sturdy blade is securely fastened into a comfortable hardwood handle",'Trowel','2020-01-18',100,'TOOL',300,'ACTIVE');
+insert into products values(101,"","Required less water",'Cactus','ACTIVE','2020-01-12',50,'PLANT',100);
+insert into products values(102,"","Sturdy blade",'Trowel','ACTIVE','2020-01-18',100,'TOOL',300);
+insert into products values(103,"","Balanced fertilizer ",'PHC','ACTIVE','2020-01-19',120,'FERTILISERS',450);
+
+
+#Orders
+insert into orders values(11,200,'2019-01-20','ORDERED',1);
+insert into orders values(12,340,'2019-01-21','PACKED',2);
+insert into orders values(13,270,'2019-01-22','ORDERED',4);
+
+#Order Details
+insert into order_details values(30,50,2,11,101);
+insert into order_details values(31,100,2,11,102);
+insert into order_details values(32,120,2,12,103);
+insert into order_details values(33,100,2,12,102);
+insert into order_details values(34,50,1,13,101);
+insert into order_details values(35,100,1,13,102);
+insert into order_details values(36,120,1,13,103);
+
 

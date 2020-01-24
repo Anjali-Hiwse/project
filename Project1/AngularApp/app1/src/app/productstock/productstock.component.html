@@ -1,0 +1,32 @@
+<div class="table-responsive">
+  <table class="table">
+      <tr>
+          <th scope="col">Product Id</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Product Price</th>
+          <th scope="col">Updated Date</th>
+          <th scope="col">Stock</th>
+      </tr>
+
+      <tr>
+        <td scope="col"><a routerLink="/editproduct">1</a></td>
+        <td scope="col">Terazza</td>
+        <td scope="col">$125.00</td>
+        <th scope="col">20-12-2019</th>
+        <th scope="col">100</th>
+        <td><button type="button" class="btn btn-success">Delete</button></td>
+    </tr>
+
+    <tr *ngFor="let p of products">
+      <td><a href="/editproduct/p.product_id">{{p.product_id}}</a></td>
+      <td>{{p.product_name}}</td>
+      <td>{{p.product_price}}</td>
+      <td>{{p.product_updated}}</td>
+      <td>{{p.product_stock}}</td>
+    </tr>
+  </table>
+  
+</div>
+
+
+

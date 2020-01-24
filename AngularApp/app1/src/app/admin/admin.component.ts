@@ -9,8 +9,11 @@ import { Router } from '@angular/router';
 })
 export class AdminComponent implements OnInit {
 
-  constructor(private service: AuthService,private router:Router) { }
-  
+  constructor(private service: AuthService,private router:Router) { 
+    this.aem=localStorage.getItem('email');
+  }
+  aem:any;
+
   ngOnInit() {
   }
 

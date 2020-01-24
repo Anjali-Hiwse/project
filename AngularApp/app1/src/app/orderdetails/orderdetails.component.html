@@ -1,34 +1,25 @@
-<div class="table-responsive">
-    <table class="table table-striped">
-      <tr>
-          
-          <th scope="col">Order Id</th>
-          <th scope="col">User Id</th>
-          <th scope="col">Order Date</th>
-          <th scope="col">Status</th>
-          <th scope="col">Amount</th>
-      </tr>
-      <tr>
-        <td>101</td>
-        <td>1</td>
-        <td>15-12-2019</td>
-        <td>Ordered</td>
-        <td>900</td>    
-      </tr>
-      <tr>
-        <td>102</td>
-        <td>2</td>
-        <td>10-01-2020</td>
-        <td>Dispatched</td>
-        <td>1000</td>    
-      </tr>
-      <tr *ngFor="let d of orders">
-        <td>{{d.order_id}}</td>
-        <td>{{d.user_id}}</td>
-        <td>{{d.order_date}}</td>
-        <td>{{d.status}}</td>
-        <td>{{d.amount}}</td>
-      </tr>
-    </table>    
-  </div>
 
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>order id</th>
+      <th>date</th>
+      <th>amount</th>
+      <th>user id</th>
+      <th>username</th>
+      <th>city</th>
+      <td>status</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let o of orders">
+      <td>{{o.orderId}}</td>
+      <td>{{o.orderDate}}</td>
+      <td>{{o.amount}}</td>
+      <td>{{o.userId.userId}}</td>
+      <td>{{o.userId.firstName}}</td>
+      <td>{{o.userId.address.city}}</td>
+      <td>{{o.status}}</td>
+    </tr>
+  </tbody>
+</table>

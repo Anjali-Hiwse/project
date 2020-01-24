@@ -1,0 +1,39 @@
+<h1 style="text-align: center">Add Product</h1>
+
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="productName">Product Name</label>
+      <input [(ngModel)]="product_name" type="text" class="form-control" placeholder="Enter ">
+    </div>
+    <div class="form-group">
+      <label for="category">Product Category</label>
+      <input [(ngModel)]="product_category" type="text" class="form-control" placeholder="Enter category">
+    </div>
+    <div class="form-group">
+      <label for="description">Product Description</label>
+      <input [(ngModel)]="product_desc" type="text" class="form-control" placeholder="Enter description">
+    </div>
+    <div class="form-group">
+        <label for="image">Product Image</label>
+        <input (change)="onSelectFile($event)" style="border: none" type="file" name="product_image" class="form-control" [(ngModel)]="product_image">
+      </div>
+    <div class="form-group">
+      <label for="price">Product price</label>
+      <input [(ngModel)]="product_price" type="text" class="form-control" placeholder="Enter price">
+    </div>
+    <div class="form-group">
+      <label for="stock">Product Stock</label>
+      <input [(ngModel)]="product_stock" type="text" class="form-control" placeholder="Enter stock">
+    </div>
+    <div class="form-group">
+      <label for="">Product Stock</label>
+      <input [(ngModel)]="product_stock" type="text" class="form-control" placeholder="Enter stock">
+    </div>
+    <div class="form-group">
+        <button (click)="addnewProdcut()" class="btn btn-success">Add</button>
+    </div>
+  </div>
+</div>
+

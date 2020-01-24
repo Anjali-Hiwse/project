@@ -1,0 +1,63 @@
+<style>
+    div.form-group {
+        background-color: oldlace;
+        color: darkblue;
+}
+
+    div.form-control {
+        color: deepskyblue;
+    }
+</style>
+
+
+<form (ngSubmit)="Insert()">
+
+    <legend style="color: maroon;" style="text-align: center; color: blue;">Register Here</legend>
+
+    <div class="form-group">
+        <label for="category">Category</label>
+        <input type="text" class="form-control" id="category" name="category" placeholder="enter category"
+            [(ngModel)]="prod.p_category">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="enter product name"
+            [(ngModel)]="prod.p_name">
+    </div>
+    <div class="form-group">
+        <label for="desc">Description</label>
+        <input type="text" class="form-control" id="desc" name="desc" placeholder="enter Description"
+            [(ngModel)]="prod.p_desc">
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" id="price" name="price" placeholder="enter price"
+            [(ngModel)]="prod.p_price">
+    </div>
+    <div class="form-group">
+        <label for="image">Image</label>
+        <input (change)="onSelectFile($event)" style="border: none" type="file" id="p_image" name="p_image" class="form-control" [(ngModel)]="prod.p_image">
+    </div>
+    <div class="form-group">
+        <label for="stock">Stock</label>
+        <input type="text" class="form-control" id="stock" name="stock" placeholder="enter stock"
+            [(ngModel)]="prod.p_stock">
+    </div>
+    <div class="form-group">
+        <label for="updated">Updated</label>
+        <input type="datetime" class="form-control" id="updated" name="date" placeholder="enter date"
+            [(ngModel)]="prod.p_date">
+    </div>
+    <div class="form-group">
+        <label for="weight">Weight</label>
+        <input type="text" class="form-control" id="weight" name="weight" placeholder="enter weight"
+            [(ngModel)]="prod.p_weight">
+    </div>
+    <div class="form-group">
+        <label for="ratings">Ratings</label>
+        <input type="text" class="form-control" id="ratings" name="ratings" placeholder="enter ratings"
+            [(ngModel)]="prod.p_ratings">
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+</form>

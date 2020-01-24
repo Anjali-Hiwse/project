@@ -1,9 +1,10 @@
 package com.app.pojos;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "order_details")
@@ -11,8 +12,9 @@ public class OrderDetails
 {
   private Integer opId;
   private Orders orderId;
-  private List<Product> productList= new ArrayList<Product>();
+  private Product prod;
   private Integer quantity;
+  private Double price;
   
   public OrderDetails() {
 	System.out.println("in order details table");
@@ -40,15 +42,14 @@ public class OrderDetails
 		this.orderId = orderId;
 	}
 	
-	
-	@OneToMany(mappedBy = "pId",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-	public List<Product> getProductList() {
-		return productList;
+	@ManyToOne
+	@JoinColumn(name = "product_id")
+	public Product getProd() {
+		return prod;
 	}
-	public void setProductList(List<Product> productList) {
-		this.productList = productList;
+	public void setProd(Product productList) {
+		this.prod = productList;
 	}
-	
 	@Column(name = "quantity")
 	public Integer getQuantity() {
 		return quantity;
@@ -57,10 +58,18 @@ public class OrderDetails
 		this.quantity = quantity;
 	}
 	
+	@Column(name = "price")
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+	
 	@Override
 	public String toString() {
-		return "OrderDetails [opId=" + opId + ", orderId=" + orderId + ", productList=" + productList + ", quantity="
-				+ quantity + "]";
+		return "OrderDetails [opId=" + opId + ", orderId=" + orderId + ", prod=" + prod + ", quantity=" + quantity
+				+ ", price=" + price + "]";
 	}
 		
 }

@@ -9,9 +9,11 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  email: any
+  cem: any
   
-  constructor(private service: AuthService,private router:Router) { }
+  constructor(private service: AuthService,private router:Router) {
+    this.cem=localStorage.getItem('email');
+   }
 
   onSignOut()
   {

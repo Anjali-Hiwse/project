@@ -1,23 +1,23 @@
-<div class="table-responsive">
-    <table class="table">
-        <tr>
-            <th scope="col">Customer Id</th>
-            <th scope="col">Customer Name</th>
-            <th scope="col">Customer Email</th>
-        <tr>
-          <td scope="col">11</td>
-          <td scope="col">Ross Geller>
-          <td scope="col">a@gmail.com</td>
-          <td><button type="button" class="btn btn-danger">Delete</button></td>
-      </tr>
-  
-      <tr *ngFor="let u of user_details">
-        <td>{{u.user_id}}</td>
-        <td>{{u.user_fname}} {{u.user_lname}}</td>
-        <td>{{u.user_email}}</td>
-        <td><button type="button" class="btn btn-danger">Delete</button></td>
-      </tr>
-    </table>
-    
-  </div>
-  
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>fname</th>
+      <th>lname</th>
+      <th>email</th>
+      <th>phone</th>
+      <th>city</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of cust">
+      <td>{{c.userId}}</td>
+      <td>{{c.firstName}}</td>
+      <td>{{c.lastName}}</td>
+      <td>{{c.email}}</td>
+      <td>{{c.phone}}</td>
+      <td>{{c.address.city}}</td>
+    </tr>
+  </tbody>
+</table>

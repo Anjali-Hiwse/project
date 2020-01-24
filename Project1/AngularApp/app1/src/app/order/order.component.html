@@ -1,0 +1,32 @@
+<div class="table-responsive">
+    <table class="table table-striped">
+      <tr>
+          
+          <th scope="col">Order Id</th>
+          <th scope="col">Product Id</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Total Price</th>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>1</td>
+        <td>3</td>
+        <td>900</td>    
+      </tr>
+      <tr>
+        <td>102</td>
+        <td>2</td>
+        <td>2</td>
+        <td>1000</td>    
+      </tr>
+      <tr *ngFor="let d of orders_details">
+        
+        <td>{{d.id}}</td>
+        <td>{{d.order_id}}</td>
+        <td>{{d.product_id}}</td>
+        <td>{{d.quantity}}</td>
+        <td>{{d.price}}</td>
+      </tr>
+    </table>
+    
+  </div>

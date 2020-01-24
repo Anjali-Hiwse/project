@@ -1,16 +1,17 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
- <link rel="stylesheet" href="../assets/shared.css"> 
+<link rel="stylesheet" href="../assets/shared.css"> 
 </head>
 <body>
 
 <div class="topnav">
      <h3 >Garderner's Company</h3>
   <a class="active" href="/user">Home</a>
-  <a href="/user/editprofile">Edit Profile</a>
+  <a href="/user/editprofilecust/{{cem}}">Edit Profile</a>
+  <a href="/user/product">Products</a>
   <a href="/user/cart">Cart</a>
-  <a href="/user/order">Orders</a>
+  
  
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <button type="submit" class="btn btn-primary" (click)="onSignOut()">Sign Out</button>
@@ -30,9 +31,15 @@
   <p>Navigation bar with a search box and a submit button inside of it.</p>
   <p>Resize the browser window to see the responsive effect.</p>
 </div> -->
+
+<!-- <div>
+  <img src>
+</div> -->
+
+
 <div class="panel panel-default">
       
-  <div class="panel-footer " style="background-color: black; height: 100px;">
+  <div class="panel-footer" style="background-color:black; height: 80px;">
   <a href="/user/aboutus">About Us</a> &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="/user/contactus">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="/user/services">Services</a>&nbsp;&nbsp;&nbsp;&nbsp;

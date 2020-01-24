@@ -8,6 +8,7 @@ import java.util.List;
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "products")
@@ -21,6 +22,7 @@ public class Product
    private byte[] image;
    @JsonFormat(pattern = "dd-MM-yyyy",timezone = "IST")
    private Date pUpdated;
+   private Status pStatus;
    
     public Product() {
 		System.out.println("in product ctor");
@@ -63,6 +65,7 @@ public class Product
 		this.pDesc = pDesc;
 	}
 	
+	@Enumerated(EnumType.STRING)
 	@Column(name = "product_category",nullable = false)
 	public Category getProductCategory() {
 		return productCategory;
@@ -97,7 +100,7 @@ public class Product
 	}
 	
 	@Temporal(TemporalType.DATE)
-	@Column(name = "product_updated",nullable = false)
+	@Column(name = "product_updated")
 	public Date getpUpdated() {
 		return pUpdated;
 	}
@@ -105,11 +108,20 @@ public class Product
 		this.pUpdated = pUpdated;
 	}
 	
+	@Enumerated(EnumType.STRING)
+	@Column(name = "product_status",length = 20)
+	public Status getpStatus() {
+		return pStatus;
+	}
+	public void setpStatus(Status pStatus) {
+		this.pStatus = pStatus;
+	}
+	
 	@Override
 	public String toString() {
 		return "Product [pId=" + pId + ", pName=" + pName + ", pDesc=" + pDesc + ", productCategory=" + productCategory
 				+ ", price=" + price + ", stock=" + stock + ", image=" + Arrays.toString(image) + ", pUpdated="
-				+ pUpdated + "]";
+				+ pUpdated + ", pStatus=" + pStatus + "]";
 	}
 		      
 }

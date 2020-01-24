@@ -2,9 +2,14 @@ package com.app.dao;
 
 import java.util.List;
 
-import com.app.pojos.UserLogin;
+import com.app.pojos.UserRegistration;
 
 public interface IUserDao 
 {
-   List<UserLogin> getUserList();
+	// select method
+   List<UserRegistration> getUserList();
+   // Login method
+   UserRegistration authenticateUser(String email,String password);
+   // 
+   
 }
