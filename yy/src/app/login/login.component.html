@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LogIn</title>
+    <style>
+    .home1{
+        background-image: url("/../assets/cricketground.jpg");
+        width: auto;
+        height:600px;
+
+        }
+    </style>
+</head>
+<body>
+    
+
+
+<!-- <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+    
+</div> -->
+
+
+
+
+<div class="home1">
+    
+    <div></div><br>
+    <div></div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    
+    </div>
+    
+    
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        
+
+    
+    <form (ngSubmit)="signin()" class="form" style="background-color:black;">
+    
+    <legend style="color:white;text-align: center;">Login Here</legend>
+<div style="transform-origin: center;">
+    <div class="form-group" style="text-align: center;" >
+        <label for="uname" style="color:white;text-align: center;">Email</label>
+        <input type="text" class="form-control" id="email" name="email" placeholder="enter email" [(ngModel)]="user.email">
+    </div>
+
+    <div class="form-group" style="text-align: center;">
+        <label for="password" style="color:white;text-align: center;">password</label>
+<input type="password" class="form-control" id="password" name="password" placeholder="password" [(ngModel)]="user.password">
+        
+    </div>
+    <button type="submit" class="btn btn-primary" >login</button>&nbsp; &nbsp;
+    <a href="/register"><span class="glyphicon glyphicon-user"></span>Not User? SignUp</a>
+
+</div>
+    <br>
+    <span class="label label-danger">{{message}}</span>
+
+</form>
+</div>
+</div> 
+   
+</body>
+</html>

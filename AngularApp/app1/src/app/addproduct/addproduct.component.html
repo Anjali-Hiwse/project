@@ -18,9 +18,8 @@
           placeholder="Enter description">
       </div>
       <div class="form-group">
-        <label for="image">Product Image</label>
-        <input (change)="onSelectFile($event)" style="border: none" type="file" name="image"
-          class="form-control" [(ngModel)]="p.image">
+        <label for="file" style="margin-top: 5mm;">Product Image</label>
+        <input type="file" (change)="onSelectFile($event)" style="height: 100%;" accept="image/*" class="form-control">
       </div>
       <div class="form-group">
         <label for="price">Product price</label>

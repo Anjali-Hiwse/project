@@ -26,14 +26,16 @@ export class EditprofileComponent implements OnInit {
   ngOnInit() {
   }
 
-
 Update(){ 
     console.log(this.details);
     let observableResult = this.service.Update(this.details);
     observableResult.subscribe((result)=>{
       console.log(result);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/admin']);
     })
+  }
+  onCancel(){
+    this.router.navigate(['/admin']);
   }
 
 }

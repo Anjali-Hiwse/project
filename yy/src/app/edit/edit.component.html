@@ -1,0 +1,44 @@
+
+<div class="container">
+
+    <form #myForm="ngForm" (ngSubmit)="add(myForm)" role="form">
+    <div style="color: black; text-align: center;"></div>   
+        
+    <div class="form-group">
+        <label for="p_name">Name:</label>
+        <input type="p_name" [(ngModel)]="prod.p_name" class="form-control" placeholder="Enter name" name="p_name">
+      </div>
+   <div class="form-group">
+        <label for="p_desc">Desc:</label>
+        <input type="p_desc" [(ngModel)]="prod.p_desc" class="form-control" placeholder="Enter desc" name="p_desc">
+      </div>
+      <div class="form-group">
+        <label for="p_date">date:</label>
+        <input type="p_date" [(ngModel)]="prod.p_date" class="form-control" placeholder="Enter date" name="p_date">
+      </div>
+      <div class="form-group">
+        <label for="p_price">price:</label>
+        <input type="p_price" [(ngModel)]="prod.p_price" class="form-control" placeholder="Enter price" name="p_price">
+      </div>
+      <div class="form-group">
+        <label for="p_weight">weight:</label>
+        <input type="p_weight" [(ngModel)]="prod.p_weight" class="form-control" placeholder="Enter weight" name="p_weight">
+      </div>
+      <div class="form-group">
+        <label for="ratings">ratings:</label>
+        <input type="ratings" [(ngModel)]="prod.ratings" class="form-control" placeholder="Enter ratings" name="ratings">
+      </div>
+      <div class="form-group">
+        <label for="stock">Address:</label>
+        <input type="stock" [(ngModel)]="prod.stock" class="form-control" placeholder="Enter stock" name="stock">
+      </div>
+      <img style="height: 150px;width: 40%" src="data:image/gif;base64,{{prod.p_image}}" alt="pic"><br>
+      <label for=""><b>Profile Picture</b></label>
+      <input (change)="onSelectFile($event)" style="border: none" type="file" class="form-control">
+      <br>
+      <br>
+      <br>
+      <button type="submit" class="btn btn-primary">update Product</button>
+    </form>
+  </div>
+  

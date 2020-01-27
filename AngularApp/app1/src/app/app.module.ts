@@ -28,6 +28,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EditproductComponent } from './editproduct/editproduct.component';
 import { EditprofilecustComponent } from './editprofilecust/editprofilecust.component';
+import { ConfirmComponent } from './confirm/confirm.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { EditprofilecustComponent } from './editprofilecust/editprofilecust.comp
     TermsComponent,
     PrivacyComponent,
     EditproductComponent,
-    EditprofilecustComponent
+    EditprofilecustComponent,
+    ConfirmComponent
   ],
   imports: [
     BrowserModule,
@@ -74,6 +76,7 @@ import { EditprofilecustComponent } from './editprofilecust/editprofilecust.comp
       { path : "cart",component: CartComponent},
       { path : "admin",component: AdminComponent},
       { path : "admin",component: AdminComponent,children:[{path:"editprofile/:aem",component:EditprofileComponent}]},
+      { path : "admin",component: AdminComponent,children:[{path:"editproduct/:pId",component:EditproductComponent}]},
       { path : "admin",component: AdminComponent,children:[{path:"addproduct",component:AddproductComponent}]},
       { path : "admin",component: AdminComponent,children:[{path:"deleteproduct/:pId",component:DeleteproductComponent}]},
       { path : "admin",component: AdminComponent,children:[{path:"productstock",component:ProductstockComponent}]},

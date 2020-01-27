@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+  
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        
+        <th>id</th>
+        <th>product name</th>
+        <th>desc</th>
+        <th>price</th>
+        <th>stock</th>
+        <th>weight</th>
+        <th>ratings</th>
+        <th>image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of product">
+        <td>{{prod.p_id}}</td>
+        <td>{{prod.p_name}}</td>
+        <td>{{prod.p_desc}}</td>
+        <td>{{prod.p_price}}</td>
+        <td>{{prod.stock}}</td>
+        <td>{{prod.p_weight}}</td>
+        <td>{{prod.ratings}}</td>
+        <td><img style="height:100px; width: 120px;" src="data:image/jpg;base64,{{prod.p_image}}" alt="Denim Jeans"></td>
+        <input (click)="addtocart(prod,prod.p_id)" type="submit" value="add to cart">
+      </tr>
+    </tbody>
+  </table>
+  
+
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>orderId</th>
+            <th>orderDate</th>
+            <th>orderamount</th>
+            <th>userId</th>
+            <th>name</th>
+            <th>deliverycity</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let o of order">
+            <td>{{o.id}}</td>
+            <td>{{o.order_date}}</td>
+            <td>{{o.amount}}</td>
+            <td>{{o.usr.id}}</td>
+            <td>{{o.usr.fName}}</td>  
+            <td>{{o.usr.addr.city}}</td>
+        </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,25 @@
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>date</th>
+            <th>teams</th>
+            <th>type</th>
+            <th>toss</th>
+            <th>winner team</th>
+            <th>get score</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let match of latest">
+            <td>{{match.unique_id}}</td>
+            <td>{{match.date}}</td>
+            <td>{{match['team-1']}}<br>vs<br>{{match['team-2']}}</td>
+            <td>{{match.type}}</td>
+            <td>{{match.toss_winner_team}}</td>
+            <td>{{match.winner_team}}</td>
+            <td><a href="/score/{{match.unique_id}}">get score details</a></td>
+        </tr>
+    </tbody>
+</table>

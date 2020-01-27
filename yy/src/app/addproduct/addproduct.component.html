@@ -1,0 +1,41 @@
+<div class="container" style="background-color: aqua;">
+
+    <form #myForm="ngForm" (ngSubmit)="add(myForm)" role="form" style="background-color: aqua;">
+    <div style="color: black; text-align: center;"></div>   
+        
+    <div class="form-group">
+        <label for="p_name">Name:</label>
+        <input type="p_name" ngModel class="form-control" placeholder="Enter name" name="p_name">
+      </div>
+   <div class="form-group">
+        <label for="p_desc">Desc:</label>
+        <input type="p_desc" ngModel class="form-control" placeholder="Enter desc" name="p_desc">
+      </div>
+      
+      <div class="form-group">
+        <label for="p_price">price:</label>
+        <input type="p_price" ngModel class="form-control" placeholder="Enter price" name="p_price">
+      </div>
+      <div class="form-group">
+        <label for="p_weight">weight:</label>
+        <input type="p_weight" ngModel class="form-control" placeholder="Enter weight" name="p_weight">
+      </div>
+      <div class="form-group">
+        <label for="ratings">ratings:</label>
+        <input type="ratings" ngModel class="form-control" placeholder="Enter ratings" name="ratings">
+      </div>
+      <div class="form-group">
+        <label for="category">category:</label>
+        <input type="category" ngModel class="form-control" placeholder="Enter category" name="category">
+      </div>
+      <div class="form-group">
+        <label for="stock">stock:</label>
+        <input type="stock" ngModel class="form-control" placeholder="Enter stock" name="stock">
+      </div>
+      <label for="image"><b>pick Image</b></label>
+      <input (change)="onSelectFile($event)" style="border: none" type="file" class="form-control">
+      <br>
+      <button type="submit" class="btn btn-primary">Save Product</button>
+    </form>
+  </div>
+  

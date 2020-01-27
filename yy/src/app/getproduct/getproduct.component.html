@@ -1,0 +1,32 @@
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Desc</th>
+            
+            <th>ratings</th>
+            
+            <th>Stock</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prod  of product">
+            <td>{{prod.p_id}}</td>
+            <td>{{prod.p_name}}</td>
+            <td>{{prod.p_price}}</td>
+            <td>{{prod.p_desc}}</td>
+            <td>{{prod.ratings}}</td>
+            <td>{{prod.stock}}</td>
+            
+            <td><img src="data:image/jpg;base64,{{prod.p_image}}" alt="prod"></td>
+            <td><a routerLink="/edit/{{prod.p_id}}">Edit</a></td>
+            <td><a routerLink="/delete/{{prod.p_id}}">delete</a></td>
+            
+        </tr>
+    </tbody>
+</table>
+

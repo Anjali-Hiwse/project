@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+</head>
+<body>
+
+
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th> orderId</th>
+            <th>amount</th>
+            <th>date</th>
+            <th>user id</th>
+            <th>u name</th>
+            <th>prod id</th>
+            <th>prod name</th>
+            <th>delievry city</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let o  of order" >
+                        <td>{{o.order.id}} </td>
+                        <!-- <span class="tooltiptext">amount:{{o.order.amount}}</span>
+                        <span class="tooltiptext">order_date:{{o.order.order_date}}</span>
+                        <span class="tooltiptext">city:{{o.order.usr.addr.city}}</span>
+                        <span class="tooltiptext">mode:cash on delivery</span> -->
+            
+            
+            <td>{{o.order.amount}}</td>
+            <td>{{o.order.order_date}}</td>
+            <td>{{o.order.usr.id}}</td>
+            <td>{{o.order.usr.fName}}</td>
+            <td>{{o.prod.p_id}}</td>
+            <td>{{o.prod.p_name}}</td>
+            <td>{{o.order.usr.addr.city}}</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+
+</body>
