@@ -8,14 +8,16 @@ import com.app.pojos.UserRegistration;
 
 public interface IAdminDao 
 {
-    UserRegistration editProfile(int id,UserRegistration u);
+    UserRegistration editProfile(UserRegistration u);
     Product addProduct(Product p);
     String deleteProduct(int id);
     List<Product> listProduct();
+    List<UserRegistration> getCustomer();
    // String addStock(int id,int stock);
     String deleteUser(int userId);
     List<Orders> listOfOrders();
-    Product getProductById();
-    Product editProduct(Product p);
-    
+    Product getProductById(int pId);
+    Product editProduct(Product p ,int id);
+    UserRegistration getId(String email);
+   
 }

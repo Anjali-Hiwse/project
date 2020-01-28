@@ -12,7 +12,7 @@ public class Address
    
     
 	
-	@Column(name="state",length=20,nullable = false)
+	@Column(name="state",length=20)
 	public String getState() {
 		return state;
 	}
@@ -20,7 +20,7 @@ public class Address
 		this.state = state;
 	}
 	
-	@Column(name="city",length = 20,nullable = false)
+	@Column(name="city",length = 20)
 	public String getCity() {
 		return city;
 	}
@@ -28,7 +28,7 @@ public class Address
 		this.city = city;
 	}
 	
-	@Column(name = "zip",length=10,nullable = false)
+	@Column(name = "zip",length=10)
 	public String getZip() {
 		return zip;
 	}
@@ -36,7 +36,7 @@ public class Address
 		this.zip = zip;
 	}
 	
-	@Column(name = "addressline1",length=50,nullable=false)
+	@Column(name = "addressline1",length=50)
 	public String getAddressLine1() {
 		return addressLine1;
 	}
@@ -52,7 +52,7 @@ public class Address
 		this.addressLine2 = addressLine2;
 	}
 	
-	@Column(name = "country",length = 20,nullable = false)
+	@Column(name = "country",length = 20)
 	public String getCountry() {
 		return country;
 	}

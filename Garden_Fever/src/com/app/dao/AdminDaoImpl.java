@@ -11,6 +11,7 @@ import com.app.pojos.Orders;
 import com.app.pojos.Product;
 import com.app.pojos.Status;
 import com.app.pojos.UserRegistration;
+import com.app.pojos.UserRole;
 
 
 @Repository
@@ -22,17 +23,11 @@ public class AdminDaoImpl implements IAdminDao {
 
 	
 	@Override
-	public UserRegistration editProfile(int id,UserRegistration u) 
+	public UserRegistration editProfile(UserRegistration u) 
 	{
-		UserRegistration user = sf.getCurrentSession().get(UserRegistration.class, id);
-		user.setFirstName(u.getFirstName());
-		user.setLastName(u.getLastName());
-		user.setEmail(u.getEmail());
-		user.setPassword(u.getPassword());
-	    user.setPhone(u.getPhone());	
-		return null;
+		sf.getCurrentSession().update(u);	
+		return u;
 	}
-
 
 	@Override
 	public Product addProduct(Product p) 
@@ -44,7 +39,9 @@ public class AdminDaoImpl implements IAdminDao {
     @Override
 	public String deleteProduct(int id) {
 		 Product prod=sf.getCurrentSession().get(Product.class,id);
-		  sf.getCurrentSession().delete(prod);;
+//		  prod.setpStatus(Status.INACTIVE);
+//		  sf.getCurrentSession().update(prod);
+          sf.getCurrentSession().delete(prod);
 		return null;
 	}
 
@@ -55,12 +52,11 @@ public class AdminDaoImpl implements IAdminDao {
 		return sf.getCurrentSession().createQuery(jpql, Product.class).getResultList();
 	}
 
-
 	@Override
 	public String deleteUser(int userId) 
 	{
 		UserRegistration u=sf.getCurrentSession().get(UserRegistration.class, userId);
-		u.setStatus(Status.INACTIVE);;
+		u.setStatus(Status.INACTIVE);
 		return null;
 	}
 
@@ -74,17 +70,33 @@ public class AdminDaoImpl implements IAdminDao {
 
 
 	@Override
-	public Product editProduct(Product p) {
-		sf.getCurrentSession().persist(p);
-		return null;
+	public Product editProduct(Product p, int id) {
+//	 Product prod= sf.getCurrentSession().get(Product.class, id);
+//	 prod.setpName(p.getpName());
+//	 prod.setpDesc(p.getpDesc());
+//	 prod
+		sf.getCurrentSession().update(p);
+		return p;
+	}
+
+	@Override
+	public Product getProductById(int id) {
+		return sf.getCurrentSession().get(Product.class,id);
 	}
 
 
 	@Override
-	public Product getProductById() {
-		// TODO Auto-generated method stub
-		return null;
+	public UserRegistration getId(String email) {
+		String jpql="select u from UserRegistration u where u.email=:email";
+		return sf.getCurrentSession().createQuery(jpql,UserRegistration.class).setParameter("email",email).getSingleResult();
+		
 	}
-    
+
+
+	@Override
+	public List<UserRegistration> getCustomer() {
+		String jpql="select u from UserRegistration u where u.role=:cust";
+		return sf.getCurrentSession().createQuery(jpql,UserRegistration.class).setParameter("cust",UserRole.CUSTOMER).getResultList();
+	}
 
 }

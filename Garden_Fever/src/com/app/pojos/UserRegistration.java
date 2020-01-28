@@ -50,7 +50,7 @@ public class UserRegistration
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	@Column(name = "fname",length = 20,nullable = false)
+	@Column(name = "fname",length = 20)
 	public String getFirstName() {
 		return firstName;
 	}
@@ -66,7 +66,7 @@ public class UserRegistration
 		this.lastName = lastName;
 	}
 	
-	@Column(name = "email",length=20,unique = true,nullable = false)
+	@Column(name = "email",length=20,unique = true)
 	public String getEmail() {
 		return email;
 	}
@@ -74,7 +74,7 @@ public class UserRegistration
 		this.email = email;
 	}
 	
-	@Column(name="password",nullable = false,unique =true,length=20)
+	@Column(name="password",unique =true,length=20)
 	public String getPassword() {
 		return password;
 	}

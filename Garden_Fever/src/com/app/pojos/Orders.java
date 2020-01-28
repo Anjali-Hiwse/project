@@ -23,11 +23,15 @@ public class Orders
   public Orders() {
 	System.out.println("this is orders table");
   }
-	public Orders(Date orderDate) {
-		super();
-		this.orderDate = orderDate;
-	}
 	
+	
+	public Orders(Date orderDate, double amount) {
+	super();
+	this.orderDate = orderDate;
+	this.amount = amount;
+   }
+
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer getOrderId() {
@@ -47,7 +51,7 @@ public class Orders
 	}
 	
 	@Temporal(TemporalType.DATE)
-	@Column(name = "order_date",nullable=false)
+	@Column(name = "order_date")
 	public Date getOrderDate() {
 		return orderDate;
 	}

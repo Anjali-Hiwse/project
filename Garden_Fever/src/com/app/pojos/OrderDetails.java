@@ -19,11 +19,13 @@ public class OrderDetails
   public OrderDetails() {
 	System.out.println("in order details table");
    }
-	public OrderDetails(Integer quantity) {
-		super();
-		this.quantity = quantity;
-	}
 	
+	public OrderDetails(Integer quantity, Double price) {
+	super();
+	this.quantity = quantity;
+	this.price = price;
+}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer getOpId() {
@@ -50,6 +52,7 @@ public class OrderDetails
 	public void setProd(Product productList) {
 		this.prod = productList;
 	}
+	
 	@Column(name = "quantity")
 	public Integer getQuantity() {
 		return quantity;

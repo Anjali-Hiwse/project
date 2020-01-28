@@ -23,6 +23,7 @@ public class Product
    @JsonFormat(pattern = "dd-MM-yyyy",timezone = "IST")
    private Date pUpdated;
    private Status pStatus;
+   private List<OrderDetails> orderDetailsList= new ArrayList<OrderDetails>();
    
     public Product() {
 		System.out.println("in product ctor");
@@ -40,7 +41,11 @@ public class Product
 	this.pUpdated = pUpdated;
    }
     
-    @Id
+    public Product(String pName2, String pDesc2, double price2, Category valueOf, int stock2,Date date) {
+         
+	}
+    
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer getpId() {
 		return pId;
@@ -49,7 +54,7 @@ public class Product
 		this.pId = pId;
 	}
 	
-	@Column(name = "product_name",nullable = false)
+	@Column(name = "product_name")
 	public String getpName() {
 		return pName;
 	}
@@ -57,7 +62,7 @@ public class Product
 		this.pName = pName;
 	}
 	
-	@Column(name = "product_desc",nullable = false)
+	@Column(name = "product_desc")
 	public String getpDesc() {
 		return pDesc;
 	}
@@ -66,7 +71,7 @@ public class Product
 	}
 	
 	@Enumerated(EnumType.STRING)
-	@Column(name = "product_category",nullable = false)
+	@Column(name = "product_category")
 	public Category getProductCategory() {
 		return productCategory;
 	}
@@ -74,7 +79,7 @@ public class Product
 		this.productCategory = productCategory;
 	}
 	
-	@Column(name = "product_price",nullable = false)
+	@Column(name = "product_price")
 	public Double getPrice() {
 		return price;
 	}
@@ -82,7 +87,7 @@ public class Product
 		this.price = price;
 	}
 	
-	@Column(name = "product_stock",nullable = false)
+	@Column(name = "product_stock")
 	public Integer getStock() {
 		return stock;
 	}
@@ -91,7 +96,7 @@ public class Product
 	}
 	
 	@Lob
-	@Column(name="product_image",nullable = false)
+	@Column(name="product_image")
 	public byte[] getImage() {
 		return image;
 	}
@@ -117,6 +122,16 @@ public class Product
 		this.pStatus = pStatus;
 	}
 	
+	@OneToMany(mappedBy = "prod",cascade = CascadeType.ALL,orphanRemoval = true)
+	@JsonIgnore
+	public List<OrderDetails> getOrderDetailsList() {
+		return orderDetailsList;
+	}
+	public void setOrderDetailsList(List<OrderDetails> orderDetailsList) {
+		this.orderDetailsList = orderDetailsList;
+	}
+	
+
 	@Override
 	public String toString() {
 		return "Product [pId=" + pId + ", pName=" + pName + ", pDesc=" + pDesc + ", productCategory=" + productCategory

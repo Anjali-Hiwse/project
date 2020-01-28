@@ -17,4 +17,5 @@
 	<!-- import hibernate config xml file -->
 	<import resource="classpath:/hibernate-persistence.xml"/>
 	
+	
 </beans>

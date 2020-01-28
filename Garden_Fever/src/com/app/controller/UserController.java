@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.dao.IUserDao;
+import com.app.pojos.OrderDetails;
 import com.app.pojos.UserRegistration;
 import com.app.pojos.UserRole;
 
@@ -50,5 +51,30 @@ public class UserController
     	if(user == null)
     		return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
     	return new ResponseEntity<UserRole>(user.getRole(),HttpStatus.OK);
+    }
+    
+    @PostMapping("/register")
+    public ResponseEntity<?> registerUser(@RequestBody UserRegistration u)
+    {
+    	System.out.println(u);
+    	try
+    	{
+    		return new ResponseEntity<UserRegistration>(dao.register(u),HttpStatus.CREATED);
+    	}
+    	catch (RuntimeException e1) {
+			e1.printStackTrace();
+			return new ResponseEntity<Void>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+    }
+    
+    @GetMapping("/orderdetails")
+    public ResponseEntity<?>  listOfOrders()
+    {
+    	List<OrderDetails> order = dao.getAllOrders();
+		if(order.size()==0)
+		{
+			return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<OrderDetails>>(order,HttpStatus.OK);
     }
 }
