@@ -100,13 +100,13 @@ export class DataService {
   }
   SelectShoes()
   {
-
     return this.helper.get("http://localhost:8080/project/product/shoes");
   }
   SelectByemail(email:string)
   {
     return this.helper.get("http://localhost:8080/project/user/val/" + email);
   }
+
   SelectByid(id)
   {
     return this.helper.get("http://localhost:8080/project/product/getsp/" +id);
@@ -128,6 +128,7 @@ export class DataService {
   {
     return this.helper.post("http://localhost:8080/project/user/register", usrobj);
   }
+
   getid(em:string)
   {
     return this.helper.get("http://localhost:8080/project/user/getid/"+em );

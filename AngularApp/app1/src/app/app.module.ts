@@ -65,6 +65,7 @@ import { ConfirmComponent } from './confirm/confirm.component';
     RouterModule.forRoot([
       { path : "",component: LoginComponent},
       { path : "user",component: HomeComponent},
+      { path : "user",component: HomeComponent,children:[{path:"confirm",component:ConfirmComponent}]},
       { path : "user",component: HomeComponent,children:[{path:"editprofilecust/:cem",component:EditprofilecustComponent}]},
       { path : "user",component: HomeComponent,children:[{path:"product",component:ProductComponent}]},
       { path : "user",component: HomeComponent,children:[{path:"order",component:OrderComponent}]},
@@ -75,6 +76,7 @@ import { ConfirmComponent } from './confirm/confirm.component';
       { path : "user",component: HomeComponent,children:[{path:"privacy",component:PrivacyComponent}]},
       { path : "cart",component: CartComponent},
       { path : "admin",component: AdminComponent},
+      
       { path : "admin",component: AdminComponent,children:[{path:"editprofile/:aem",component:EditprofileComponent}]},
       { path : "admin",component: AdminComponent,children:[{path:"editproduct/:pId",component:EditproductComponent}]},
       { path : "admin",component: AdminComponent,children:[{path:"addproduct",component:AddproductComponent}]},
@@ -88,6 +90,7 @@ import { ConfirmComponent } from './confirm/confirm.component';
       { path : "admin",component: AdminComponent,children:[{path:"privacy",component:PrivacyComponent}]},
       { path : "editprofile", component: EditprofileComponent},
       { path : "home", component : HomeComponent },
+
       { path : "login" , component: LoginComponent },
       { path : "order" , component: OrderComponent },
       { path : "register" ,  component : RegisterComponent },

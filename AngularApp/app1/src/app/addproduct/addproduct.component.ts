@@ -10,22 +10,20 @@ import { Router } from '@angular/router';
 export class AddproductComponent implements OnInit {
   
   image:any;
-  p:any;
-  // p={
-  //   pName:"",
-  //   pDesc:"",
-  //   productCategory:"",
-  //   price:"",
-  //   stock:"",
-  //   image:"",
-  //   pUpdated:""
-  // }
+  p={
+    pName:"",
+    pDesc:"",
+    productCategory:"",
+    price:"",
+    stock:"",
+    image:"",
+    pUpdated:""
+  }
   constructor(public service:DataService,private router:Router) { }
   onSelectFile(event) {
     this.image = event.target.files[0];
   }
 
-  
   addnewProduct(formdata){
     console.log(formdata.form.value);
     this.p=formdata.form.value;

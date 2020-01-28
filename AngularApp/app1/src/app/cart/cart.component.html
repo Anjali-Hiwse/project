@@ -1,42 +1,23 @@
-<div class="table-responsive">
-    <table class="table table-striped table-responsive">
+<table class="table table-hover">
+  <thead>
       <tr>
-          <th scope="col">Product Id</th>
-          <th scope="col">Image</th>
-          <th scope="col">Name</th>
-          <th scope="col">Description</th>
-          <th scope="col">Price</th>
+          <th>orderId</th>
+          <th>orderDate</th>
+          <th>orderamount</th>
+          <th>UserId</th>
+          <th>Name</th>
+          <th>Delivery City</th>
+          
       </tr>
-      <tr>
-        <td>1</td>
-        <td><img src="../assets/image/plant1.jpg" alt="plant"></td>
-        <td>Trezza Trough Planter</td>
-        <td>Our exclusive Italian Terrazza planters offer classic styling with self-watering convenience.</td>
-        <td>$125.00</td>
+  </thead>
+  <tbody>
+      <tr *ngFor="let o of order">
+          <td>{{o.orderId}}</td>
+          <td>{{o.orderDate}}</td>
+          <td>{{o.amount}}</td>
+          <td>{{o.usr.userId}}</td>
+          <td>{{o.usr.firstName}}</td>  
+          <td>{{o.usr.addr.city}}</td>
       </tr>
-      <br>
-      <br>
-      <br>
-      <tr>
-        <td>2</td>
-        <td><img src="../assets/image/tool1.jpg" alt="plant"></td>
-        <td>Intervale Essential Garden Tools</td>
-        <td>Three essential hand tools: trowel, twist fork, and rake cultivator</td>
-        <td>$31.96</td>
-      </tr>
-      <tr *ngFor="let p of product">
-        <td>{{p.pid}}</td>
-        <td>{{p.image}}</td>
-        <td>{{p.name}}</td>
-        <td>{{p.description}}</td>
-        <td>{{p.price}}</td>
-      </tr>
-    </table>
-    <br>
-    <br>
-    <br>
-    <tr colspan=5 text-align="centre">
-    <button type="submit" class="btn btn-primary" value="Submit">Make Payment</button>
-    </tr>
-  </div>
-  
+  </tbody>
+</table>

@@ -15,8 +15,9 @@
         <td>{{p.price}}</td>
         <td>{{p.pUpdated}}</td>
         <td>{{p.stock}}</td>
-
-        <td><a href="/user/addtocart/{{p.pId}}"> add to cart</a></td>
+        <td>
+        <input (click)="addtocart(p,p.pId)" type="submit" value="add to cart">
+      </td>
       </tr>
     </table>
     

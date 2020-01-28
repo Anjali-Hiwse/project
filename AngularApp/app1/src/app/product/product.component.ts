@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -8,7 +9,7 @@ import { DataService } from '../data.service';
 })
 export class ProductComponent implements OnInit {
   product:any
-  constructor(private service:DataService) { }
+  constructor(private service:DataService,private router:Router) { }
 
   ngOnInit() {
     let observable=this.service.getLIst();
@@ -18,5 +19,14 @@ export class ProductComponent implements OnInit {
       
     })
   }
+
+  addtocart(p,pId)
+  {
+    console.log(p);
+    console.log(pId);
+    window.sessionStorage.setItem("prod",pId);
+     this.router.navigate(['/confirm'])   
+  }
+
 
 }

@@ -58,4 +58,14 @@ export class DataService {
   Insert(usrobj){
     return this.http.post("http://localhost:8080/Garden_Fever/login_details/register",usrobj);
   }
+
+  SelectByorderbtemail(email)
+  {
+    return this.http.get("http://localhost:8080/Garden_Fever/customer/cart" + email);
+  }
+
+  SelectByid(id)
+  {
+    return this.http.get("http://localhost:8080/Garden_Fever/customer/getsp" +id);
+  }
 }

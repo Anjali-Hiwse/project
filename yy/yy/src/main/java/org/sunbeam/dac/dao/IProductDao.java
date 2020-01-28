@@ -19,6 +19,5 @@ public interface IProductDao
 Product getProductByid(int pid);
 Product editproduct(Product p);
 List<OrderDetails> getAllOrders();
-
  
 }
